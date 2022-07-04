@@ -10,7 +10,8 @@
           backdrop-filter: blur(81.5485px);
   opacity: 0;
   transform: translateX(100%);
-  transition: all 1.5s ease-out;
+  transition: all 0.5s ease-out;
+  text-align: left;
 }
 .mobile-menu__close-container {
   padding: 2rem 2.5rem 0 3.2rem;

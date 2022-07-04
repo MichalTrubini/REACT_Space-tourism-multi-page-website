@@ -28,7 +28,7 @@ const MobileMenu = () => {
             <div className='nav__hamburger-container'>
                 <img src={hamburger} alt="open menu" onClick={ShowMenuHandler}/>
             </div>
-            <div className={menuVisible && 'mobile-menu mobile-menu__visible' || 'mobile-menu'}>
+            <div className={(menuVisible && 'mobile-menu mobile-menu__visible') || 'mobile-menu'}>
             <div className='mobile-menu__close-container'>
                 <img src={close} alt="close menu" className='mobile-menu__close' onClick={HideMenuHandler}/>
             </div>
