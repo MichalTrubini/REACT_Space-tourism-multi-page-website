@@ -1,6 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap');
 
 body {
-  background-color: #3f3f3f;
+  background-color: #0B0D17;
+  font-weight: 400;
+  text-align: center;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Bellefair', serif;
+  text-transform: uppercase;
+}
+
+h5, p, a {
+  font-family: 'Barlow', sans-serif;
+}
+
+.container {
+  position: relative;
+}
+
+header {
+  position: absolute;
+  width: 100%;
 }
 

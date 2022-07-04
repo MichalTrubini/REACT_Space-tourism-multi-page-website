@@ -1,0 +1,10 @@
+@import 'variables';
+
+.destination {
+    background: url("../assets/destination/background-destination-mobile.jpg") no-repeat;
+
+    &__heading {
+        color: $WhiteColor;
+        font-weight: 400;
+    }
+}
