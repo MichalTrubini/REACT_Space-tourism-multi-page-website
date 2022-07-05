@@ -1,0 +1,19 @@
+@import 'variables';
+
+.pagetitle {
+    
+    &__heading {
+    color: $WhiteColor;
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: 2.7px;
+    line-height: 1.9rem;
+    text-transform: uppercase;
+    }
+    
+    &__heading--dark {
+        opacity: 0.25;
+        font-weight: 700;
+        padding-right: 1.8rem;
+    }
+}

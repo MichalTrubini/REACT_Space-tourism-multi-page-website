@@ -1,11 +1,12 @@
 import Planet from "../components/Planet";
+import PageTitle from "../components/PageTitle";
 
-import '../css/destination.css'
+import '../css/pages.css'
 
 const Destination = () => {
     return (
         <div className="destination">
-            <h5 className="destination__heading"><span className="destination__heading--dark">01</span> Pick your destination</h5>
+            <PageTitle><span className="pagetitle__heading--dark">01</span> Pick your destination</PageTitle>
             <Planet />
         </div>
     )

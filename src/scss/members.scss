@@ -1,0 +1,58 @@
+@import 'variables';
+
+.member {
+
+    &__image {
+        height: 22.3rem;
+        display: block;
+        margin: 3.2rem auto 0;
+    }
+
+    &__img-container {
+        border-bottom: 1px solid #383B4B;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        gap: 1.6rem;
+        cursor: pointer;
+        margin: 3.2rem 0;
+    }
+
+    &__button {
+        width: 1rem;
+        height: 1rem;
+        background-color: #FFFFFF;
+        opacity: 0.17;
+        border-radius: 100%;
+        border: none;
+    }
+
+    &__button:focus {
+        opacity: 1;
+    }
+
+    &__role {
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 1.8rem;
+        color: white;
+        opacity: 0.5;
+        margin-bottom: 0.8rem;
+    }
+
+    &__name {
+        font-size: 2.4rem;
+        line-height: 2.75rem;
+        color: white;
+        margin-bottom: 1.6rem;
+    }
+
+    &__bio {
+        font-size: 1.5rem;
+        color:#D0D6F9;
+        line-height: 2.5rem;
+        font-family: 'Barlow', sans-serif;
+    }
+}
