@@ -8,12 +8,15 @@
 
 .destination {
   background: url("../assets/destination/background-destination-mobile.jpg") no-repeat;
+  background-size: cover;
 }
 
 .crew {
   background: url("../assets/crew/background-crew-mobile.jpg") no-repeat;
+  background-size: cover;
 }
 
 .technology {
   background: url("../assets/technology/background-technology-mobile.jpg") no-repeat;
+  background-size: cover;
 }/*# sourceMappingURL=pages.css.map */

@@ -55,9 +55,9 @@ const Members = () => {
 
     const orderCrew = () => {
         if (crewMember === 'douglas') return 0;
-        if (crewMember === 'anousheh') return 1;
-        if (crewMember === 'mark') return 2;
-        if (crewMember === 'victor') return 3;
+        if (crewMember === 'mark') return 1;
+        if (crewMember === 'victor') return 2;
+        if (crewMember === 'anousheh') return 3;
     };
 
     const crewImage = () => {
