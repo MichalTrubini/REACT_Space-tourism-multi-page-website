@@ -8,7 +8,7 @@ import Technology from './pages/Technology';
 
 function App() {
   return (
-    <div>
+    <div className='container'>
       <Header />
       <main>
         <Route path='/' exact>

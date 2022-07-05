@@ -24,6 +24,7 @@ p, a {
 
 .container {
   position: relative;
+  overflow-x: hidden;
 }
 
 header {
