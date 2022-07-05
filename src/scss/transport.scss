@@ -32,9 +32,10 @@
         padding-left: 0.2rem;
     }
 
-    &__button:focus {
+    &__button-active {
         background-color: white;
         color: #0B0D17;
+        outline: none;
     }
 
     &__note {

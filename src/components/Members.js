@@ -73,10 +73,10 @@ const Members = () => {
               <img src={crewImage()} alt="moon" className='member__image'/>
             </div>
             <div className='member__list'>
-                <button className='member__button' onClick={() => memberSelectHandler('douglas')} />
-                <button className='member__button' onClick={() => memberSelectHandler('anousheh')}/>
-                <button className='member__button' onClick={() => memberSelectHandler('mark')}/>
-                <button className='member__button' onClick={() => memberSelectHandler('victor')}/>
+                <button className={crewMember === 'douglas' ? 'member__button member__button-selected' : 'member__button'} onClick={() => memberSelectHandler('douglas')} />
+                <button className={crewMember === 'anousheh' ? 'member__button member__button-selected' : 'member__button'} onClick={() => memberSelectHandler('anousheh')}/>
+                <button className={crewMember === 'mark' ? 'member__button member__button-selected' : 'member__button'} onClick={() => memberSelectHandler('mark')}/>
+                <button className={crewMember === 'victor' ? 'member__button member__button-selected' : 'member__button'} onClick={() => memberSelectHandler('victor')}/>
             </div>
             <h2 className='member__role'>{crew[orderCrew()].role}</h2>
             <h3 className='member__name'>{crew[orderCrew()].name}</h3>

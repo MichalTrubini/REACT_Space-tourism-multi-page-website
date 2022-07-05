@@ -69,10 +69,6 @@
 
     &__item-selected {
         box-shadow: 0px 3px #fff;
-    }
-
-    &__item:focus {
-        box-shadow: 0px 3px #fff;
         outline: none;
     }
 }

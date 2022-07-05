@@ -25,9 +25,10 @@
   align-items: center;
   padding-left: 0.2rem;
 }
-.transport__button:focus {
+.transport__button-active {
   background-color: white;
   color: #0B0D17;
+  outline: none;
 }
 .transport__note {
   color: #D0D6F9;
