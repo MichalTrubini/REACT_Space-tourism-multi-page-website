@@ -4,6 +4,7 @@
   color: #D0D6F9;
   min-height: 100vh;
   background: url("../assets/home/background-home-mobile.jpg") no-repeat;
+  background-size: cover;
   padding: 11.2rem 2.4rem 0;
 }
 .home__subheading {
