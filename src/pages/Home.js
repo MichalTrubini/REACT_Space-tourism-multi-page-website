@@ -2,8 +2,11 @@ import '../css/home.css'
 
 const Home = () => {
     console.log(window.innerHeight);
+
+    const height = window.innerHeight;
+
     return (
-        <div className="home">
+        <div className="home" style={{minHeight:height}}>
             <div className="home__intro">
                 <p className="home__subheading">So, you want to travel to</p>
                 <h1 className="home__heading">Space</h1>
