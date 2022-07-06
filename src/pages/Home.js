@@ -1,6 +1,7 @@
 import '../css/home.css'
 
 const Home = () => {
+    console.log(window.innerHeight);
     return (
         <div className="home">
             <div className="home__intro">
