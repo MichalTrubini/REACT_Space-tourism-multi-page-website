@@ -1,5 +1,6 @@
 .transport__image {
-  height: 17rem;
+  width: 100%;
+  height: auto;
   display: block;
   margin: 3.2rem auto 0;
 }
@@ -51,4 +52,29 @@
   color: #D0D6F9;
   line-height: 2.5rem;
   font-family: "Barlow", sans-serif;
+}
+
+@media screen and (min-width: 550px) {
+  .transport__image {
+    margin-top: 6rem;
+  }
+  .transport__list {
+    margin: 5.6rem 0 4.4rem;
+  }
+  .transport__note {
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    letter-spacing: 2.7px;
+    margin-bottom: 1.6rem;
+  }
+  .transport__name {
+    font-size: 4rem;
+    line-height: 4.584rem;
+  }
+  .transport__description {
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+    width: 61%;
+    margin: auto;
+  }
 }/*# sourceMappingURL=transport.css.map */

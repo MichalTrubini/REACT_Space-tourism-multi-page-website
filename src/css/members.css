@@ -1,3 +1,7 @@
+.member {
+  display: grid;
+  grid-template-areas: "one" "two" "three";
+}
 .member__image {
   height: 22.3rem;
   display: block;
@@ -5,6 +9,7 @@
 }
 .member__img-container {
   border-bottom: 1px solid #383B4B;
+  grid-area: one;
 }
 .member__list {
   display: flex;
@@ -12,6 +17,10 @@
   gap: 1.6rem;
   cursor: pointer;
   margin: 3.2rem 0;
+  grid-area: two;
+}
+.member__text-content {
+  grid-area: three;
 }
 .member__button {
   width: 1rem;
@@ -43,4 +52,37 @@
   color: #D0D6F9;
   line-height: 2.5rem;
   font-family: "Barlow", sans-serif;
+}
+
+@media screen and (min-width: 550px) {
+  .member__img-container {
+    grid-area: three;
+    border-bottom: none;
+  }
+  .member__image {
+    width: 52%;
+    height: auto;
+  }
+  .member__list {
+    grid-area: two;
+    margin: 4rem 0;
+  }
+  .member__text-content {
+    grid-area: one;
+    padding-top: 6rem;
+  }
+  .member__role {
+    font-size: 2.4rem;
+    line-height: 2.75rem;
+  }
+  .member__name {
+    font-size: 4rem;
+    line-height: 4.854rem;
+  }
+  .member__bio {
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+    max-width: 60%;
+    margin: auto;
+  }
 }/*# sourceMappingURL=members.css.map */

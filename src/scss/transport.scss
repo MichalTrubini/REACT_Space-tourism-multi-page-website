@@ -3,7 +3,8 @@
 .transport {
 
     &__image {
-        height: 17rem;
+        width: 100%;
+        height: auto;
         display: block;
         margin: 3.2rem auto 0;
     }
@@ -61,5 +62,37 @@
         color:#D0D6F9;
         line-height: 2.5rem;
         font-family: 'Barlow', sans-serif;
+    }
+}
+
+@media screen and (min-width:550px) {
+
+    .transport {
+        &__image {
+            margin-top: 6rem;
+        }
+
+        &__list {
+            margin: 5.6rem 0 4.4rem;
+        }
+
+        &__note {
+            font-size: 1.6rem;
+            line-height: 1.9rem;
+            letter-spacing: 2.7px;
+            margin-bottom: 1.6rem;
+        }
+
+        &__name {
+            font-size: 4rem;
+            line-height: 4.584rem;
+        }
+
+        &__description {
+            font-size: 1.6rem;
+            line-height: 2.8rem;
+            width: 61%;
+            margin: auto;
+        }
     }
 }

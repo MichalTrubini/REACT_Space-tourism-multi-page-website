@@ -2,6 +2,11 @@
 
 .member {
 
+    display: grid;
+    grid-template-areas: 'one'
+                         'two'
+                         'three';
+
     &__image {
         height: 22.3rem;
         display: block;
@@ -10,6 +15,7 @@
 
     &__img-container {
         border-bottom: 1px solid #383B4B;
+        grid-area: one;
     }
 
     &__list {
@@ -18,6 +24,11 @@
         gap: 1.6rem;
         cursor: pointer;
         margin: 3.2rem 0;
+        grid-area: two;
+    }
+
+    &__text-content {
+        grid-area: three;
     }
 
     &__button {
@@ -54,5 +65,47 @@
         color:#D0D6F9;
         line-height: 2.5rem;
         font-family: 'Barlow', sans-serif;
+    }
+}
+
+@media screen and (min-width:550px) {
+    .member {
+
+        &__img-container {
+            grid-area: three;
+            border-bottom: none;
+        }
+
+        &__image {
+            width: 52%;
+            height: auto;
+        }
+    
+        &__list {
+            grid-area: two;
+            margin: 4rem 0;
+        }
+    
+        &__text-content {
+            grid-area: one;
+            padding-top: 6rem;
+        }
+
+        &__role {
+            font-size: 2.4rem;
+            line-height: 2.75rem;
+        }
+
+        &__name {
+            font-size: 4rem;
+            line-height: 4.854rem;
+        }
+
+        &__bio {
+            font-size: 1.6rem;
+            line-height: 2.8rem;
+            max-width: 60%;
+            margin: auto;
+        }
     }
 }
