@@ -22,4 +22,14 @@
   .pagetitle__heading--fix {
     padding-left: 3.85rem;
   }
+}
+@media screen and (min-width: 1100px) {
+  .pagetitle__heading {
+    font-size: 2.8rem;
+    line-height: 3.36rem;
+    letter-spacing: 4.72px;
+  }
+  .pagetitle__heading--fix {
+    padding-left: 3.85rem;
+  }
 }/*# sourceMappingURL=pagetitle.css.map */

@@ -87,4 +87,51 @@
     justify-content: center;
     gap: 10rem;
   }
+}
+@media screen and (min-width: 1100px) {
+  .planet {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 6.4rem;
+    text-align: left;
+  }
+  .planet__container {
+    max-width: 44.5rem;
+  }
+  .planet__image {
+    margin: 0;
+    display: block;
+    width: 39.9%;
+    max-width: 44.5rem;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .planet__list {
+    margin-bottom: 3.7rem;
+    justify-content: flex-start;
+  }
+  .planet__item {
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    letter-spacing: 2.7px;
+  }
+  .planet__heading {
+    font-size: 10rem;
+    line-height: 11.4rem;
+    margin-bottom: 1.4rem;
+  }
+  .planet__description {
+    width: 100%;
+    padding-bottom: 5.4rem;
+    font-size: 1.8rem;
+    line-height: 3.2rem;
+  }
+  .planet__specs {
+    padding-top: 2.8rem;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 7.9rem;
+  }
 }/*# sourceMappingURL=planet.css.map */

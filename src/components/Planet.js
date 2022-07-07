@@ -71,23 +71,25 @@ const Planet = () => {
     return (
         <div className="planet">
             <img src={planetImage()} alt="moon" className='planet__image'/>
-            <div className='planet__list'>
-                <button className={planet === 'moon' ? 'planet__item planet__item-selected' : 'planet__item'} onClick={() => planetSelectHandler('moon')}>Moon</button>
-                <button className={planet === 'mars' ? 'planet__item planet__item-selected' : 'planet__item'} onClick={() => planetSelectHandler('mars')}>Mars</button>
-                <button className={planet === 'europa' ? 'planet__item planet__item-selected' : 'planet__item'} onClick={() => planetSelectHandler('europa')}>Europa</button>
-                <button className={planet === 'titan' ? 'planet__item planet__item-selected' : 'planet__item'} onClick={() => planetSelectHandler('titan')}>Titan</button>
-            </div>
-            <h2 className='planet__heading'>{destinations[orderPlanet()].name}</h2>
-            <p className='planet__description'>{destinations[orderPlanet()].description}</p>
-            <div className='planet__specs'>
-                <div>
-                    <p className='planet__specs-title'>avg. distance</p>
-                    <h3 className='planet__specs-content'>{destinations[orderPlanet()].distance}</h3>
-                </div>
-                <div>
-                    <p className='planet__specs-title'>est. travel time</p>
-                    <h3 className='planet__specs-content'>{destinations[orderPlanet()].travel}</h3>
-                </div>
+            <div className='planet__container'>
+              <div className='planet__list'>
+                  <button className={planet === 'moon' ? 'planet__item planet__item-selected' : 'planet__item'} onClick={() => planetSelectHandler('moon')}>Moon</button>
+                  <button className={planet === 'mars' ? 'planet__item planet__item-selected' : 'planet__item'} onClick={() => planetSelectHandler('mars')}>Mars</button>
+                  <button className={planet === 'europa' ? 'planet__item planet__item-selected' : 'planet__item'} onClick={() => planetSelectHandler('europa')}>Europa</button>
+                  <button className={planet === 'titan' ? 'planet__item planet__item-selected' : 'planet__item'} onClick={() => planetSelectHandler('titan')}>Titan</button>
+              </div>
+              <h2 className='planet__heading'>{destinations[orderPlanet()].name}</h2>
+              <p className='planet__description'>{destinations[orderPlanet()].description}</p>
+              <div className='planet__specs'>
+                  <div>
+                      <p className='planet__specs-title'>avg. distance</p>
+                      <h3 className='planet__specs-content'>{destinations[orderPlanet()].distance}</h3>
+                  </div>
+                  <div>
+                      <p className='planet__specs-title'>est. travel time</p>
+                      <h3 className='planet__specs-content'>{destinations[orderPlanet()].travel}</h3>
+                  </div>
+              </div>
             </div>
         </div>
     )

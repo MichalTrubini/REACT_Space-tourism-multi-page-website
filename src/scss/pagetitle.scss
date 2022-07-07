@@ -33,3 +33,19 @@
         }
     }
 }
+
+@media screen and (min-width:1100px) {
+
+    .pagetitle {
+
+        &__heading {
+            font-size: 2.8rem;
+            line-height: 3.36rem;
+            letter-spacing: 4.72px;
+        }
+
+        &__heading--fix {
+            padding-left: 3.85rem;
+        }
+    }
+}
