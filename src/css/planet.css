@@ -56,4 +56,35 @@
 .planet__item-selected {
   box-shadow: 0px 3px #fff;
   outline: none;
+}
+
+@media screen and (min-width: 550px) {
+  .planet__image {
+    margin: 6rem auto 5.3rem;
+    width: 39%;
+  }
+  .planet__list {
+    margin-bottom: 3.2rem;
+  }
+  .planet__item {
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    letter-spacing: 2.7px;
+  }
+  .planet__heading {
+    font-size: 8rem;
+    line-height: 9.2rem;
+    margin-bottom: 0.8rem;
+  }
+  .planet__description {
+    width: 75%;
+    margin: auto;
+    padding-bottom: 4.9rem;
+  }
+  .planet__specs {
+    padding-top: 2.8rem;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10rem;
+  }
 }/*# sourceMappingURL=planet.css.map */

@@ -35,19 +35,26 @@
 @media screen and (min-width:550px) {
     .home {
         background: url("../assets/home/background-home-tablet.jpg") no-repeat;
+        background-size: cover;
         padding: 0;
         padding-top: 20.2rem;
     }
 
     .destination {
         background: url("../assets/destination/background-destination-tablet.jpg") no-repeat;
+        background-size: cover;
+        padding: 13.6rem 3.85rem 6.2rem;
     }
     
     .crew {
         background: url("../assets/crew/background-crew-tablet.jpg") no-repeat;
+        background-size: cover;
+        padding: 13.6rem 3.85rem 0;
     }
     
     .technology {
         background: url("../assets/technology/background-technology-tablet.jpg") no-repeat;
+        background-size: cover;
+        padding: 13.6rem 3.85rem 9.7rem;
     }
 }

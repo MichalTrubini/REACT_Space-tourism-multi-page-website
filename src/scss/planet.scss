@@ -72,3 +72,42 @@
         outline: none;
     }
 }
+
+@media screen and (min-width:550px) {
+    .planet {
+
+        &__image {
+            margin: 6rem auto 5.3rem;
+            width: 39%;
+        }
+
+        &__list {
+            margin-bottom: 3.2rem;
+        }
+
+        &__item {
+            font-size: 1.6rem;
+            line-height: 1.9rem;
+            letter-spacing: 2.7px;
+        }
+
+        &__heading {
+            font-size: 8rem;
+            line-height: 9.2rem;
+            margin-bottom: 0.8rem;
+        }
+
+        &__description {
+            width: 75%;
+            margin: auto;
+            padding-bottom: 4.9rem;
+        }
+
+        &__specs {
+            padding-top: 2.8rem;
+            flex-direction: row;
+            justify-content: center;
+            gap: 10rem;
+        }
+    }
+}

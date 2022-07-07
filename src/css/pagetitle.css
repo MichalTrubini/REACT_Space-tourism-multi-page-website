@@ -10,4 +10,13 @@
   opacity: 0.25;
   font-weight: 700;
   padding-right: 1.8rem;
+}
+
+@media screen and (min-width: 550px) {
+  .pagetitle__heading {
+    text-align: left;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    letter-spacing: 3.38px;
+  }
 }/*# sourceMappingURL=pagetitle.css.map */
