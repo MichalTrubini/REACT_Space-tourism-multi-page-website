@@ -1,10 +1,10 @@
 import {Link} from 'react-router-dom';
 
-import '../css/home.css'
+import '../css/home.css';
+import '../css/pages.css';
 
 const Home = () => {
-    console.log(window.innerHeight);
-
+    
     const height = window.innerHeight;
 
     return (

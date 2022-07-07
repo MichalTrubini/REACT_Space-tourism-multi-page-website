@@ -1,12 +1,14 @@
+import MobileMenu from './Menu';
+
 import '../css/nav.css';
-import MobileMenu from './MobileMenu';
 
 const Nav = () => {
+
     return (
         <nav className='nav'>
-            <MobileMenu/>
+             <MobileMenu />
         </nav>
     )
-}
+    }
 
 export default Nav;
