@@ -23,6 +23,8 @@ p, a {
 .container {
   position: relative;
   overflow-x: hidden;
+  max-width: 144rem;
+  margin: auto;
 }
 
 header {

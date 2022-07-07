@@ -1,10 +1,15 @@
 import React, { useState, useRef, useEffect } from "react";
+import useWindowDimensions from '../functions/WindowDimensions';
 
 import '../css/transport.css';
 
 import launchVehicle from '../assets/technology/image-launch-vehicle-landscape.jpg';
 import spaceport from '../assets/technology/image-spaceport-landscape.jpg';
 import capsule from '../assets/technology/image-space-capsule-landscape.jpg';
+
+import launchVehiclePortrait from '../assets/technology/image-launch-vehicle-portrait.jpg';
+import spaceportPortrait from '../assets/technology/image-spaceport-portrait.jpg';
+import capsulePortrait from '../assets/technology/image-space-capsule-portrait.jpg';
 
 const Transport = () => {
 
@@ -34,7 +39,10 @@ const Transport = () => {
           description: "A space capsule is an often-crewed spacecraft that uses a blunt-body reentry capsule to reenter the Earth's atmosphere without wings. Our capsule is where you'll spend your time during the flight. It includes a space gym, cinema, and plenty of other activities to keep you entertained."
         }
       ]
-
+    
+    const { width } = useWindowDimensions();
+    const desktopWidth = 1100;
+    
     const [vehicle, setVehicle] = useState('launch vehicle');
     
     const vehicleSelectHandler = (target) => {
@@ -48,9 +56,18 @@ const Transport = () => {
     };
 
     const vehicleImage = () => {
+
+      if (width < desktopWidth) {
         if (vehicle === 'launch vehicle') return launchVehicle;
         if (vehicle === 'spaceport') return spaceport;
         if (vehicle === 'space capsule') return capsule;
+      }
+
+      if (width >= desktopWidth) {
+        if (vehicle === 'launch vehicle') return launchVehiclePortrait;
+        if (vehicle === 'spaceport') return spaceportPortrait;
+        if (vehicle === 'space capsule') return capsulePortrait;
+      }
     }
 
     const buttonFocus = useRef();
@@ -62,14 +79,18 @@ const Transport = () => {
     return (
         <div className="transport">
             <img src={vehicleImage()} alt="moon" className='transport__image'/>
-            <div className='transport__list'>
-                <button className={vehicle === 'launch vehicle' ? 'transport__button transport__button-active' :'transport__button'} ref={buttonFocus} onClick={() => vehicleSelectHandler('launch vehicle')}>1</button>
-                <button className={vehicle === 'spaceport' ? 'transport__button transport__button-active' :'transport__button'} onClick={() => vehicleSelectHandler('spaceport')}>2</button>
-                <button className={vehicle === 'space capsule' ? 'transport__button transport__button-active' :'transport__button'} onClick={() => vehicleSelectHandler('space capsule')}>3</button>
+            <div className="transport__container">
+              <div className='transport__list'>
+                  <button className={vehicle === 'launch vehicle' ? 'transport__button transport__button-active' :'transport__button'} ref={buttonFocus} onClick={() => vehicleSelectHandler('launch vehicle')}>1</button>
+                  <button className={vehicle === 'spaceport' ? 'transport__button transport__button-active' :'transport__button'} onClick={() => vehicleSelectHandler('spaceport')}>2</button>
+                  <button className={vehicle === 'space capsule' ? 'transport__button transport__button-active' :'transport__button'} onClick={() => vehicleSelectHandler('space capsule')}>3</button>
+              </div>
+              <div className="transport__text-container">
+                <p className="transport__note">The terminology...</p>
+                <h3 className='transport__name'>{transport[orderVehicle()].name}</h3>
+                <p className='transport__description'>{transport[orderVehicle()].description}</p>
+              </div>
             </div>
-            <p className="transport__note">The terminology...</p>
-            <h3 className='transport__name'>{transport[orderVehicle()].name}</h3>
-            <p className='transport__description'>{transport[orderVehicle()].description}</p>
         </div>
     )
 }
