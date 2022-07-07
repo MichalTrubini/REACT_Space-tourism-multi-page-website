@@ -109,3 +109,57 @@
         }
     }
 }
+
+@media screen and (min-width:1100px) {
+
+    .member {
+        grid-template-columns: 1fr 1fr;
+
+        grid-template-areas: 
+        'one three'
+        'two three';
+
+        &__img-container {
+            grid-area: three;
+            border-bottom: none;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        &__image {
+            width: 100%;
+            height: auto;
+        }
+    
+        &__list {
+            grid-area: two;
+            margin: 12rem 0 9.4rem;
+            justify-content: flex-start;
+        }
+    
+        &__text-content {
+            grid-area: one;
+            padding-top: 15.4rem;
+            text-align: left;
+        }
+
+        &__role {
+            font-size: 3.2rem;
+            line-height: 3.6rem;
+            margin-bottom: 1.5rem;
+        }
+
+        &__name {
+            font-size: 5.6rem;
+            line-height: 6.4rem;
+            margin-bottom: 2.7rem;
+        }
+
+        &__bio {
+            font-size: 1.8rem;
+            line-height: 3.2rem;
+            max-width: 68%;
+            margin: 0;
+        }
+    }
+}
