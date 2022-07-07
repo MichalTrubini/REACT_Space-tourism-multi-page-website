@@ -1,11 +1,12 @@
 import {Link} from 'react-router-dom';
+import useWindowDimensions from '../functions/WindowDimensions';
 
 import '../css/home.css';
 import '../css/pages.css';
 
 const Home = () => {
     
-    const height = window.innerHeight;
+    const { height } = useWindowDimensions();
 
     return (
         <div className="home" style={{minHeight:height}}>

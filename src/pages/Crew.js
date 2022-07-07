@@ -1,12 +1,12 @@
 import Members from "../components/Members";
 import PageTitle from "../components/PageTitle";
+import useWindowDimensions from '../functions/WindowDimensions';
 
 import '../css/pages.css'
 
 const Crew = () => {
-    console.log(window.document.body.offsetHeight);
 
-    const height = window.innerHeight;
+    const { height } = useWindowDimensions();
     
     return (
     <div className="crew"  style={{minHeight:height}}>

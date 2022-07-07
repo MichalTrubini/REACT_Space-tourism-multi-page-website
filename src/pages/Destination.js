@@ -1,12 +1,12 @@
 import Planet from "../components/Planet";
 import PageTitle from "../components/PageTitle";
+import useWindowDimensions from '../functions/WindowDimensions';
 
 import '../css/pages.css'
 
 const Destination = () => {
-    console.log(window.document.body.offsetHeight);
 
-    const height = window.innerHeight;
+    const { height } = useWindowDimensions();
 
     return (
         <div className="destination" style={{minHeight:height}}>

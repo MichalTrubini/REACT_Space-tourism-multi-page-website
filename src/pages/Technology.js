@@ -1,9 +1,10 @@
 import PageTitle from "../components/PageTitle";
 import Transport from "../components/Transport";
+import useWindowDimensions from '../functions/WindowDimensions';
 
 const Technology = () => {
 
-    const height = window.innerHeight;
+    const { height } = useWindowDimensions();
 
     return (
         <div className="technology" style={{minHeight:height}}>
