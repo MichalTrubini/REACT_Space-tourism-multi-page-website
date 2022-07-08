@@ -130,5 +130,9 @@
             line-height: 3.7rem;
             letter-spacing: 2px;
         }
+
+        &__link:hover, &__link:focus {
+            outline: 87px solid rgba(255,255,255,0.1);
+        }
     }
 }

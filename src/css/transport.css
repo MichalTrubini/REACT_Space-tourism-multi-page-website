@@ -84,14 +84,17 @@
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
-    gap: 13rem;
+    gap: 8rem;
+    margin-top: 4rem;
   }
   .transport__image {
     margin-top: 0;
+    width: 35vw;
   }
   .transport__container {
     text-align: left;
     display: flex;
+    flex-direction: column-reverse;
     gap: 8rem;
   }
   .transport__text-container {
@@ -100,12 +103,13 @@
   .transport__list {
     margin: 0;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     gap: 3.2rem;
   }
   .transport__note {
     margin-bottom: 1.1rem;
+    margin-top: 4rem;
   }
   .transport__name {
     font-size: 5.6rem;
@@ -122,5 +126,35 @@
     width: 8rem;
     height: 8rem;
     font-size: 3.2rem;
+  }
+  .transport__button {
+    cursor: pointer;
+  }
+  .transport__button:hover, .transport__button:focus {
+    border: 1px solid white;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .transport {
+    flex-direction: row-reverse;
+    gap: 13rem;
+    margin-top: 0;
+  }
+  .transport__image {
+    margin-top: 0;
+    width: 100%;
+  }
+  .transport__container {
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    gap: 8rem;
+  }
+  .transport__list {
+    flex-direction: column;
+  }
+  .transport__note {
+    margin-bottom: 1.1rem;
+    margin-top: 0;
   }
 }/*# sourceMappingURL=transport.css.map */

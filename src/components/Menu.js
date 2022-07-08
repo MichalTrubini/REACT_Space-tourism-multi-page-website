@@ -13,19 +13,22 @@ import useWindowDimensions from '../functions/WindowDimensions';
 const Menu = () => {
 
     const [menuVisible, setMenuVisible] = useState(false);
+    const [page, setPage] = useState('home');
 
     const ShowMenuHandler = () => {
         setMenuVisible(true);
     }
 
-    const HideMenuHandler = () => {
+    const HideMenuHandler = (target) => {
         setMenuVisible(false);
+        setPage(target);
     }
 
     const { height, width } = useWindowDimensions();
     const mobileBreak = 550;
+    const tabletViewport = 768;
 
-    const classes = () => {
+    const mobileMenuclasses = () => {
         if (width < mobileBreak) {return (menuVisible && 'menu mobile-menu mobile-menu__visible') || 'menu mobile-menu'}
         if (width >= mobileBreak) {return 'menu'}
     }
@@ -41,7 +44,7 @@ const Menu = () => {
                 <img src={hamburger} alt="open menu" onClick={ShowMenuHandler}/>
             </div>
             }
-            <div className={classes()} style={width < mobileBreak ? {minHeight:height} : undefined}>
+            <div className={mobileMenuclasses()} style={width < mobileBreak ? {minHeight:height} : undefined}>
                 {
                 width < mobileBreak  && 
                 <div className='mobile-menu__close-container'>
@@ -49,10 +52,10 @@ const Menu = () => {
                 </div>
                 }
                 <ul className='menu__list'>
-                    <li className='menu__list-item'><Link to="/" className='menu__link' onClick={HideMenuHandler}><span className='menu__link--bold'>00</span> home</Link></li>
-                    <li className='menu__list-item'><Link to="/destination" className='menu__link' onClick={HideMenuHandler}><span className='menu__link--bold'>01</span> destination</Link></li>
-                    <li className='menu__list-item'><Link to="/crew" className='menu__link' onClick={HideMenuHandler}><span className='menu__link--bold'>02</span> crew</Link></li>
-                    <li className='menu__list-item'><Link to="/technology" className='menu__link' onClick={HideMenuHandler}><span className='menu__link--bold'>03</span> technology</Link></li>
+                    <li className='menu__list-item'><Link to="/" className={(page  === 'home' & width >= tabletViewport) ? 'menu__link menu__link-active' : 'menu__link'} onClick={() => HideMenuHandler('home')}><span className='menu__link--bold'>00</span> home</Link></li>
+                    <li className='menu__list-item'><Link to="/destination" className={(page  === 'destination' & width >= tabletViewport) ? 'menu__link menu__link-active' : 'menu__link'} onClick={() => HideMenuHandler('destination')}><span className='menu__link--bold'>01</span> destination</Link></li>
+                    <li className='menu__list-item'><Link to="/crew" className={(page  === 'crew' & width >= tabletViewport) ? 'menu__link menu__link-active' : 'menu__link'} onClick={() => HideMenuHandler('crew')}><span className='menu__link--bold'>02</span> crew</Link></li>
+                    <li className='menu__list-item'><Link to="/technology" className={(page  === 'technology' & width >= tabletViewport) ? 'menu__link menu__link-active' : 'menu__link'} onClick={() => HideMenuHandler('technology')}><span className='menu__link--bold'>03</span> technology</Link></li>
                 </ul>
             </div>
         </>

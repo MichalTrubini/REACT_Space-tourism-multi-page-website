@@ -15,7 +15,6 @@
   display: flex;
   justify-content: center;
   gap: 1.6rem;
-  cursor: pointer;
   margin: 3.2rem 0;
   grid-area: two;
 }
@@ -29,6 +28,7 @@
   opacity: 0.17;
   border-radius: 100%;
   border: none;
+  cursor: pointer;
 }
 .member__button-selected {
   opacity: 1;
@@ -126,5 +126,8 @@
     line-height: 3.2rem;
     max-width: 68%;
     margin: 0;
+  }
+  .member__button:hover, .member__button:focus {
+    background-color: rgba(255, 255, 255, 0.5);
   }
 }/*# sourceMappingURL=members.css.map */

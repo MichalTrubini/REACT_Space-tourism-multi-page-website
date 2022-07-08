@@ -2,10 +2,6 @@ import React, { Suspense } from 'react';
 import {Route} from 'react-router-dom';
 
 import Header from "./components/Header";
-//import Home from './pages/Home';
-//import Destination from './pages/Destination';
-//import Crew from './pages/Crew';
-//import Technology from './pages/Technology';
 
 const Home = React.lazy(() => import('./pages/Home'));
 const Destination = React.lazy(() => import('./pages/Destination'));

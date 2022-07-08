@@ -107,4 +107,7 @@
     line-height: 3.7rem;
     letter-spacing: 2px;
   }
+  .home__link:hover, .home__link:focus {
+    outline: 87px solid rgba(255, 255, 255, 0.1);
+  }
 }/*# sourceMappingURL=home.css.map */

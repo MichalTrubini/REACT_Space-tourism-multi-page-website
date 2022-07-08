@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
 import useWindowDimensions from '../functions/WindowDimensions';
 
 import '../css/transport.css';
@@ -70,18 +70,12 @@ const Transport = () => {
       }
     }
 
-    const buttonFocus = useRef();
-
-    useEffect(() => {
-        buttonFocus.current.focus(); 
-       }, [buttonFocus]);
-
     return (
         <div className="transport">
             <img src={vehicleImage()} alt="moon" className='transport__image'/>
             <div className="transport__container">
               <div className='transport__list'>
-                  <button className={vehicle === 'launch vehicle' ? 'transport__button transport__button-active' :'transport__button'} ref={buttonFocus} onClick={() => vehicleSelectHandler('launch vehicle')}>1</button>
+                  <button className={vehicle === 'launch vehicle' ? 'transport__button transport__button-active' :'transport__button'} onClick={() => vehicleSelectHandler('launch vehicle')}>1</button>
                   <button className={vehicle === 'spaceport' ? 'transport__button transport__button-active' :'transport__button'} onClick={() => vehicleSelectHandler('spaceport')}>2</button>
                   <button className={vehicle === 'space capsule' ? 'transport__button transport__button-active' :'transport__button'} onClick={() => vehicleSelectHandler('space capsule')}>3</button>
               </div>
